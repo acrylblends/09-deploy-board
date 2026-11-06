@@ -1,17 +1,22 @@
 # Deploy Board
 
-A release operations console that tracks deployments by service and environment with a chronological activity feed and incident response.
+A release operations console: deployments per service and environment, a chronological event feed and an incident board with a timeline. The seed has three services, three environments and eighteen deployments today.
 
-An ACRYL Blends blueprint for the **DevOps** category (`acrylblends.deploy-board`, category 09 of 100).
-
-Status: designed, being built. `design/spec.md` is the specification and `design/mockup.html` the mockup (open it in a browser). The app itself,
-composed from Cordis plugins (one `plugins/<feature>/` folder and one `blend.yaml` row per feature), lands here when it passes review.
-
-When it is ready you will start it with:
+## Run it
 
 ```sh
-npm create acrylblends@latest my-app -- --from acrylblends.deploy-board
-cd my-app && npm install && npm run dev
+npm install
+npm start
 ```
 
-Listed on https://acrylblends.github.io/blends and https://acryl.dev/blends.
+Open the address it prints. `npm test` runs the tests (node:test; no network, no key).
+
+## What to ask the chat next
+
+- Queue a deployment of the worker to staging and promote it.
+- Roll back the production gateway and look at the event log.
+- Acknowledge the staging incident and resolve it after the rollback.
+
+## Screenshot
+
+![Deploy Board](docs/screenshot.png)
